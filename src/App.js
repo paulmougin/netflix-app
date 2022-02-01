@@ -1,5 +1,6 @@
 import "./App.css";
 import netflixlogo from "./assets/images/logo-netflix.png";
+import moviesdata from "./assets/movies_rnexgr.json";
 
 const App = () => {
   return (
@@ -7,21 +8,20 @@ const App = () => {
       <header>
         <img alt="Netflix Logo" src={netflixlogo} />
       </header>
-      <div className="cards-shelf">
-        <h1>Émissions TV</h1>
-        <div className="card-scroller">
-          <div className="card">
-            <img src="" alt="" />
-          </div>
-          <div className="card"></div>
-          <div className="card"></div>
-          <div className="card"></div>
-          <div className="card"></div>
-          <div className="card"></div>
-          <div className="card"></div>
-          <div className="card"></div>
-          <div className="card"></div>
-        </div>
+
+      <div className="library">
+        {moviesdata.map((shelf, index) => {
+          return (
+            <div className="card-shelf">
+              <h2>{shelf.category}</h2>
+              <div className="card-scroller">
+                {shelf.images.map((cardcover, index) => {
+                  return <img src={cardcover} />;
+                })}
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
