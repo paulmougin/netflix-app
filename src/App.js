@@ -10,6 +10,16 @@ const App = () => {
       <div className="cards-shelf">
         <h1>Émissions TV</h1>
         <div className="card-scroller">
+          <div className="card">
+            <img src="" alt="" />
+          </div>
+          <div className="card"></div>
+          <div className="card"></div>
+          <div className="card"></div>
+          <div className="card"></div>
+          <div className="card"></div>
+          <div className="card"></div>
+          <div className="card"></div>
           <div className="card"></div>
         </div>
       </div>

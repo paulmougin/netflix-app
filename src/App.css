@@ -32,4 +32,16 @@ h1 {
   background-color: cadetblue;
   height: 11rem;
   width: 100%;
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.card {
+  background-color: blueviolet;
+  border: 2px white solid;
+  box-sizing: border-box;
+  height: 11rem;
+  width: 18rem;
+  flex-shrink: 0;
 }
